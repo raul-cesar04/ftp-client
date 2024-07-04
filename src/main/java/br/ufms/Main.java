@@ -3,10 +3,7 @@ package br.ufms;
 
 import br.ufms.commands.Command;
 import org.apache.commons.net.ftp.FTPClient;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.security.InvalidParameterException;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,7 +35,11 @@ public class Main {
             }
 
             System.out.println("Fechou?");
-        }catch (Exception e){
+        }catch (InvalidParameterException e){
+            System.out.println("Parametro inválido!");
+            System.out.println(e.getMessage());
+        }
+        catch (Exception e){
             e.printStackTrace();
         }
     }
