@@ -14,9 +14,9 @@ public class InputManager {
         return rawCommand.split(" ")[0];
     }
 
-    public String getParams(String rawCommand){
+    public String[] getParams(String rawCommand){
         String[] pieces = rawCommand.split(" ");
-        return String.join(" ", Arrays.copyOfRange(pieces, 1, pieces.length));
+        return Arrays.copyOfRange(pieces, 1, pieces.length);
     }
     public String getLine(){
         return scanner.nextLine();
