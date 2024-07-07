@@ -16,4 +16,14 @@ public class MakeDirectoryCommand implements Command{
                 System.currentTimeMillis(), path, client.makeDirectory(path));
         System.out.println();
     }
+
+    @Override
+    public String getId() {
+        return "MKD <diretorio>";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Make Directory: Cria novo diretório.";
+    }
 }

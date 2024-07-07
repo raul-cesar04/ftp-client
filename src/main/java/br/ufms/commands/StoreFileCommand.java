@@ -18,4 +18,14 @@ public class StoreFileCommand implements Command{
         System.out.println();
         System.out.printf("[STOR][%d] Arquivo %s enviado para %s com sucesso: %b\n", System.currentTimeMillis(), localPath, remotePath, client.storeFile(remotePath, fileInputStream));
     }
+
+    @Override
+    public String getId() {
+        return "STOR <local_path> <remote_path>";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Upload de arquivo para servidor.";
+    }
 }

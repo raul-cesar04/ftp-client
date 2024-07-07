@@ -13,6 +13,16 @@ public class ListCommand implements Command{
         printTree(path, client);
     }
 
+    @Override
+    public String getId() {
+        return "LIST <diretorio (opcional)> ";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Imprime arvore do diretório.";
+    }
+
     private void printTree(String path, FTPClient client) throws Exception {
         FTPFile[] files = client.listFiles(path);
         System.out.printf("[LIST][%d] %s\n", System.currentTimeMillis(), path);

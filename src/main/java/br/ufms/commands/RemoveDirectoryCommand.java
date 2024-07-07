@@ -13,4 +13,14 @@ public class RemoveDirectoryCommand implements Command{
 
         System.out.printf("[RMD][%d] Diretório %s removido com sucesso: %b\n", System.currentTimeMillis(), directory, client.removeDirectory(directory));
     }
+
+    @Override
+    public String getId() {
+        return "RMD <diretorio>";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Remove Directory: Remove um diretório.";
+    }
 }

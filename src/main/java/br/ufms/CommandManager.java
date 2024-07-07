@@ -5,6 +5,7 @@ import br.ufms.commands.*;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class CommandManager {
     private Map<String, Command> commands;
@@ -23,5 +24,13 @@ public class CommandManager {
 
     public Command getCommand(String name){
         return commands.get(name.toLowerCase());
+    }
+
+    public String[] getKeySet(){
+        String[] keys;
+
+        this.commands.keySet().toArray(keys = new String[commands.size()]);
+
+        return keys;
     }
 }

@@ -13,4 +13,14 @@ public class ChangeWorkingDirectoryCommand implements Command{
 
         client.changeWorkingDirectory(directory);
     }
+
+    @Override
+    public String getId() {
+        return "CWD <diretorio>";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Change Working Directory: Muda o diretório atual.";
+    }
 }
