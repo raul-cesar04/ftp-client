@@ -3,8 +3,6 @@ package br.ufms.commands;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 
-import java.io.File;
-
 public class ListCommand implements Command{
     @Override
     public void execute(String[] params, FTPClient client) throws Exception {
