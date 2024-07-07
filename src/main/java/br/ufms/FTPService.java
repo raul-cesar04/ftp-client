@@ -14,6 +14,7 @@ public class FTPService {
 
         // Conecta e loga no servidor FTP
         client.connect(host, port);
+        client.enterRemotePassiveMode();
         client.login(username, password);
         return client;
     }

@@ -11,12 +11,13 @@ public class CommandManager {
     public CommandManager(){
         commands = new HashMap<String, Command>();
 
-        commands.put("mkd", new MakeDirectory()); // Make Directory
-        commands.put("cwd", new ChangeWorkingDirectory()); // Change Working directory
-        commands.put("pwd", new PrintWorkingDirectory()); // Print Working directory
-        commands.put("help", new Help()); // Ajuda
-        commands.put("listdir", null); // Listar diretorios
-        commands.put("list", null); // Listar arquivos no diretorio
+        commands.put("mkd", new MakeDirectoryCommand()); // Make Directory
+        commands.put("cwd", new ChangeWorkingDirectoryCommand()); // Change Working directory
+        commands.put("pwd", new PrintWorkingDirectoryCommand()); // Print Working directory
+        commands.put("rmd", new RemoveDirectoryCommand()); // Remove diretório
+        commands.put("list", new ListCommand()); // Listar arquivos no diretorio
+
+        commands.put("stor", new StoreFileCommand()); // Criar arquivo
         // TODO: rename files, rename directories, create files, remove files, remove directories
     }
 
