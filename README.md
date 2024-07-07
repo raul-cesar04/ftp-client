@@ -4,7 +4,7 @@ FTP Client built in java using Apache Commons Net.
 ## Afazeres
 ### Cliente FTP
 -[ ] Arquivos
-  -[ ] Download de Arquivos do Servidor.
+  -[x] Download de Arquivos do Servidor.
   -[x] Upload de arquivos para o Servidor.
   -[x] Remover Arquivos. 
   -[x] Renomear arquivos.
