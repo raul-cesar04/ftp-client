@@ -19,6 +19,9 @@ public class CommandManager {
         commands.put("list", new ListCommand()); // Listar arquivos no diretorio
 
         commands.put("stor", new StoreFileCommand()); // Criar arquivo
+        commands.put("del", new DeleteFileCommand()); // Remove arquivo
+        commands.put("ren", new RenameFileCommand()); // Renomeia arquivo
+        commands.put("retr", new RetrieveFileCommand()); // Download de arquivo
         // TODO: rename files, rename directories, create files, remove files, remove directories
     }
 

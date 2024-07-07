@@ -6,14 +6,13 @@ FTP Client built in java using Apache Commons Net.
 -[ ] Arquivos
   -[ ] Download de Arquivos do Servidor.
   -[x] Upload de arquivos para o Servidor.
-  -[ ] Criar arquivos.
-  -[ ] Remover Arquivos. 
-  -[ ] Renomear arquivos.
+  -[x] Remover Arquivos. 
+  -[x] Renomear arquivos.
   -[ ] Listar arquivos. 
 -[ ] Diretórios
   -[x] Criar diretórios.
   -[x] Remover Diretórios.
-  -[ ] Renomear Diretórios.
+  -[x] Renomear Diretórios.
   -[ ] Listar Diretórios.
 -[ ] Miscelânea
   -[ ] Limitar niveis e numero de arquivos.
