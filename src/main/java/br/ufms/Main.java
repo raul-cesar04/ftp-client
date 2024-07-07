@@ -3,6 +3,8 @@ package br.ufms;
 
 import br.ufms.commands.Command;
 import org.apache.commons.net.ftp.FTPClient;
+
+import javax.naming.LimitExceededException;
 import java.security.InvalidParameterException;
 
 public class Main {
@@ -38,6 +40,10 @@ public class Main {
 
                 }catch (InvalidParameterException e){
                     System.out.println("Parametro inválido!");
+                }catch (LimitExceededException e){
+                    System.out.println("Limite de arquivos no diretório atingido (2).");
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
 
             }
