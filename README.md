@@ -15,7 +15,8 @@ FTP Client built in java using Apache Commons Net.
   -[x] Renomear Diretórios.
   -[x] Listar Diretórios.
 -[ ] Miscelânea
-  -[ ] Limitar niveis e numero de arquivos.
+  -[x] Numero de arquivos.
+  -[ ] Limitar niveis de diretório. 
   -[x] Fazer a Lista de afazeres.
 
 ### Cliente EMAIL

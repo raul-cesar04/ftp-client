@@ -13,8 +13,10 @@ public class MakeDirectoryCommand implements Command{
 
         String path = params[0];
 
+        String pwd = client.printWorkingDirectory();
+        if(!pwd.equals("/")) pwd = pwd.concat("/");
         if(VerifyUtils.getDirectoryCount(path, client) >= 5) throw new LimitExceededException();
-        if(VerifyUtils.getDirectoryLevel(path, client, 0) >= 3) throw new LimitExceededException();
+        if(VerifyUtils.getDirectoryLevel(pwd+path, client, 0) > 3) throw new LimitExceededException();
 
         System.out.println();
         System.out.printf("[MKD][%d] Diretorio %s criado com sucesso: %b\n",
