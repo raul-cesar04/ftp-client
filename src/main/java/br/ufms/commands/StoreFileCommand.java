@@ -1,6 +1,7 @@
 package br.ufms.commands;
 
 import br.ufms.PathUtils;
+import br.ufms.VerifyUtils;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 
@@ -17,12 +18,7 @@ public class StoreFileCommand implements Command{
         String localPath = params[0];
         String remotePath = params[1];
 
-        int fileCount = 0;
-        for(FTPFile file : client.listFiles(PathUtils.getPathFileDirectory(remotePath))){
-            if(file.isDirectory()) continue;
-
-            fileCount++;
-        }
+        int fileCount = VerifyUtils.getFileCount(remotePath, client);
 
         if(fileCount >= 2) throw new LimitExceededException();
 

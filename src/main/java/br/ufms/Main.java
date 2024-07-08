@@ -41,7 +41,7 @@ public class Main {
                 }catch (InvalidParameterException e){
                     System.out.println("Parametro inválido!");
                 }catch (LimitExceededException e){
-                    System.out.println("Limite de arquivos no diretório atingido (2).");
+                    System.out.println("Limite de arquivos ou diretorios atingido no diretório (2 arquivos e 5 pastas).");
                 }catch (Exception e){
                     e.printStackTrace();
                 }
