@@ -22,7 +22,6 @@ public class CommandManager {
         commands.put("del", new DeleteFileCommand()); // Remove arquivo
         commands.put("ren", new RenameFileCommand()); // Renomeia arquivo
         commands.put("retr", new RetrieveFileCommand()); // Download de arquivo
-        // TODO: rename files, rename directories, create files, remove files, remove directories
     }
 
     public Command getCommand(String name){
